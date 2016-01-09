@@ -10,7 +10,7 @@
 #define AllHeader_pch
 
 //第三方库
-#import "AFNetworking.h"
+#import <AFNetworking.h>
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
 //带一个webView的控制器

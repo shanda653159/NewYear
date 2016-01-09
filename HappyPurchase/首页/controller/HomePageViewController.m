@@ -265,7 +265,7 @@
 -(void)refreshAndLoadMoreData{
     
     //添加头部视图
-    self.collectionView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         
         if (self.app.isHomePage) {
             [self requestHeaderImage];
@@ -274,7 +274,7 @@
     }];
     
     //添加尾部视图
-    self.collectionView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         
         if (self.app.isHomePage) {
             [self requestHeaderImage];
@@ -285,8 +285,8 @@
 //结束刷新
 -(void)endRefresh{
     
-    [self.collectionView.header endRefreshing];
-    [self.collectionView.footer endRefreshing];
+    [self.collectionView.mj_header endRefreshing];
+    [self.collectionView.mj_footer endRefreshing];
 }
 
 

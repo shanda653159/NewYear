@@ -113,14 +113,14 @@
 -(void)refreshAndLoadMoreData{
     
     //添加头部视图
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         
         [self getRequestData];
     }];
     
     
     //添加尾部视图
-    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         
         [self getRequestData];
     }];
@@ -128,8 +128,8 @@
 //结束刷新
 -(void)endRefresh{
     
-    [self.tableView.header endRefreshing];
-    [self.tableView.footer endRefreshing];
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
 }
 
 

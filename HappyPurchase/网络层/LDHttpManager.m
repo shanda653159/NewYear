@@ -7,7 +7,6 @@
 //
 
 #import "LDHttpManager.h"
-#import "AFNetworking.h"
 
 @implementation LDHttpManager
 

@@ -103,7 +103,7 @@
     //?control=tianmao&model=get_sec_ten_one&page=-1
     [LDHttpManager getRequestWithURL:KChoose_URL andParams:@{@"control":@"tianmao",@"model":@"get_sec_ten_one",@"page":[NSString stringWithFormat:@"%ld",self.page]} compeletionBlock:^(NSURLResponse *response, NSError *error, id obj) {
         
-        if (!self.tableView.footer.isRefreshing) {
+        if (!self.tableView.mj_footer.isRefreshing) {
             
             //清除旧数据
             [self.dataArr removeAllObjects];
@@ -152,7 +152,7 @@
 -(void)refreshAndLoadMoreData{
     
     //添加头部视图
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         
         self.page = -1;
         [self getRequestData];
@@ -160,7 +160,7 @@
     
     
     //添加尾部视图
-    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         
         self.page++;
         [self getRequestData];
@@ -170,8 +170,8 @@
 //结束刷新
 -(void)endRefresh{
     
-    [self.tableView.header endRefreshing];
-    [self.tableView.footer endRefreshing];
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
 }
 
 

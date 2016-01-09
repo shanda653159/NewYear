@@ -106,7 +106,7 @@
     //?model=index_data&page=1
     [LDHttpManager getRequestWithURL:KStyle_URL andParams:@{@"model":@"index_data",@"page":[NSString stringWithFormat:@"%ld",self.page]} compeletionBlock:^(NSURLResponse *response, NSError *error, id obj) {
         
-        if (!self.collectionView.footer.isRefreshing) {
+        if (!self.collectionView.mj_footer.isRefreshing) {
             
             //清除旧数据
             [self.dataArr removeAllObjects];
@@ -155,14 +155,14 @@
 -(void)refreshAndLoadMoreData{
     
     //添加头部视图
-    self.collectionView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         
         self.page = 1;
         [self getRequestData];
     }];
     
     //添加尾部视图
-    self.collectionView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         
         self.page++;
         [self getRequestData];
@@ -171,8 +171,8 @@
 //结束刷新
 -(void)endRefresh{
     
-    [self.collectionView.header endRefreshing];
-    [self.collectionView.footer endRefreshing];
+    [self.collectionView.mj_header endRefreshing];
+    [self.collectionView.mj_footer endRefreshing];
 }
 
 
