@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="HeaderModel" representedClassName="HeaderModel" syncable="YES">
+        <attribute name="ipadimg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ipadzimg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="iphoneimg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="iphoneimgnew" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="iphonemimg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="iphonezimg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="target" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="HomePageModel" representedClassName="HomePageModel" syncable="YES">
+        <attribute name="deal_num" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="discount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_buy_sale" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_onsale" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_vip_price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ling_value" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="now_price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="num_iid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="origin_price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pic_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qiangpai" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rp_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="show_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start_discount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="total_hate_number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="total_love_number" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OverflowModel" representedClassName="OverflowModel" syncable="YES">
+        <attribute name="deal_num" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="discount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_onsale" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_vip_price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="now_price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="num_iid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="origin_price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pic_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rp_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="show_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start_discount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="total_love_number" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="HeaderModel" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="HomePageModel" positionX="-63" positionY="54" width="128" height="300"/>
+        <element name="OverflowModel" positionX="-54" positionY="144" width="128" height="240"/>
+    </elements>
+</model>
